@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <AssemblyName>Fux</AssemblyName>
+        <Authors>bolvarak</Authors>
+        <Company />
+        <Description>
+            This client library is just a collection of potentially useful things
+        </Description>
+        <DocumentationFile>https://raw.githubusercontent.com/bolvarak/aspnetcore-fux-examples/main/Readme.md</DocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Fux</PackageId>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>Abstract;Library;Singleton;Reflection</PackageTags>
+        <Product>Fux Library</Product>
+        <RepositoryUrl>https://github.com/bolvarak/aspnetcore-fux.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <RootNamespace>Fux</RootNamespace>
+        <TargetFramework>net5.0</TargetFramework>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <PlatformTarget>x64</PlatformTarget>
+        <OutputPath>bin/Debug</OutputPath>
+        <DocumentationFile>bin/Debug/netcoreapp3.1/Fux.xml</DocumentationFile>
+        <NoWarn>1701;1702;1591</NoWarn>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <Optimize>True</Optimize>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <OutputPath>bin/Release</OutputPath>
+        <PlatformTarget>x64</PlatformTarget>
+        <DocumentationFile>bin/Release/netcoreapp3.1/Fux.xml</DocumentationFile>
+        <Optimize>True</Optimize>
+        <NoWarn>1701;1702;1591</NoWarn>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+        <PackageReference Include="MongoDB.Driver" Version="2.11.4" />
+        <PackageReference Include="MongoDB.Bson" Version="2.11.4" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+        <PackageReference Include="StackExchange.Redis" Version="2.1.58" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include=".github\workflows\publish.yml" />
+    </ItemGroup>
+</Project>
